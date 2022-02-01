@@ -1,4 +1,4 @@
-"""Exercise 02 - One-Shot Wordle"""
+"""Exercise 02 - One-Shot Wordle."""
 
 __author__ = "730401929"
 
@@ -51,16 +51,3 @@ if guess == "python":
     print("Woo! You got it!")
 else:
     print("Not quite. Play again soon!")
-
-
-
-
-
-    
-
-
-
-
-
-
-
