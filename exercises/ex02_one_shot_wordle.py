@@ -11,13 +11,13 @@ guess: str = input("What is your 6-letter guess?")
 counter: int = 6
 
 while len(guess) != 6:
-    guess: str = input("That was not 6 letters! Try again:")
+    print("That was not 6 letters! Try again:")
 
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 length: str = guess[0]
-maximum: int = 6
+maximum: int = 6    
 i: int = 0
 help: str = ""
 
@@ -48,7 +48,7 @@ while i < maximum:
             help = help + WHITE_BOX 
     alternate = 0
     present = False
-    i = i + 1 
+    i = i + 1
 print(help)
 
 if guess == "python":
