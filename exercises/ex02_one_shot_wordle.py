@@ -2,10 +2,6 @@
 
 __author__ = "730401929"
 
-from tkinter import FALSE
-from xml.etree.ElementPath import prepare_descendant
-
-
 secret: str = "python"
 guess: str = input("What is your 6-letter guess?")
 counter: int = 6
@@ -21,7 +17,7 @@ maximum: int = 6
 i: int = 0
 help: str = ""
 
-present: bool = FALSE
+present: bool = False
 alternate: int = 0
 
 # while i < maximum:
