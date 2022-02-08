@@ -1,6 +1,7 @@
-"""Exercise 03 - Wordle"""
+"""Exercise 03 - Wordle."""
 
-__author__ = 730401929
+__author__ = "730401929"
+
 
 def contains_char(word: str, char: str) -> bool:
     """Checks to see if the single character is in the word given as the first string."""
@@ -12,6 +13,7 @@ def contains_char(word: str, char: str) -> bool:
             return True
         i = i + 1
     return False 
+
 
 def emojified(guess: str, secret: str) -> str:
     """Returns string of emojis that codify player's guess compared to the secret word."""
@@ -33,12 +35,14 @@ def emojified(guess: str, secret: str) -> str:
         i = i + 1
     return help
 
+
 def input_guess(length: int) -> str:
     """Checks that the length of the guessed word matches the expected length."""
     guess: str = input("Enter a " + str(length) + " character word: ")
     while len(guess) != length:  
         guess = input("That wasn't " + str(length) + " chars! Try again: ")   
     return guess 
+
 
 def main() -> None:
     """"The entrypoint of the program and main game loop."""
@@ -57,6 +61,7 @@ def main() -> None:
             print(emojified(guess, secret))
         turn = turn + 1
     print("X/6 - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
