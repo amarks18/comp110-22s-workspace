@@ -25,7 +25,7 @@ def emojified(guess: str, secret: str) -> str:
     GREEN_BOX: str = "\U0001F7E9"
     YELLOW_BOX: str = "\U0001F7E8"
     while i < maximum:
-        if contains_char(secret, guess[i]) == False:
+        if not contains_char(secret, guess[i]):
             help = help + WHITE_BOX
         else:
             if guess[i] == secret[i]:
@@ -50,7 +50,7 @@ def main() -> None:
     turn: int = 1
     length: int = 5
     correct: bool = False
-    while turn < 7 and correct == False: 
+    while turn < 7 and not correct: 
         print("=== Turn " + str(turn) + "/6 ===")
         guess: str = input_guess(length)
         if guess == secret:
@@ -60,7 +60,8 @@ def main() -> None:
         else: 
             print(emojified(guess, secret))
         turn = turn + 1
-    print("X/6 - Sorry, try again tomorrow!")
+    if not correct:
+        print("X/6 - Sorry, try again tomorrow!")
 
 
 if __name__ == "__main__":
