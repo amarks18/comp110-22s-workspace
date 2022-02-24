@@ -1,21 +1,23 @@
-"""Drawing of the Pi Beta Phi House."""
+"""Drawing of a mountain scene, sun, and ladybug."""
 
 __author__ = "730401929"
 
-from turtle import Turtle, colormode, done, color
+from turtle import Turtle, done
+
 
 def main() -> None: 
     """The entrypoint of my scene."""
     mount: Turtle = Turtle()
-    mountain(mount, -450, -52, 300)
+    mountain(mount, -450, -55, 300)
     mountain(mount, -400, -50, 400)
     mountain(mount, -200, -40, 300)
-    mountain(mount, -50, -51, 475)
+    mountain(mount, -50, -60, 475)
     grass()
     sun()
     ladybug()
     dot()
     done()
+
 
 def mountain(mount: Turtle, x: float, y: float, size: float) -> None: 
     """Drawing mountains to include in mountain scene."""
@@ -31,6 +33,7 @@ def mountain(mount: Turtle, x: float, y: float, size: float) -> None:
         mount.left(120)
         sides += 1
     mount.end_fill()
+
 
 def grass() -> None:
     """Drawing grass."""
@@ -48,6 +51,7 @@ def grass() -> None:
         sides += 1 
     grass.end_fill()
 
+
 def sun() -> None: 
     """Drawing the sun."""
     sun: Turtle = Turtle()
@@ -60,6 +64,7 @@ def sun() -> None:
     sun.fillcolor("#F5DE16")
     sun.circle(30)
     sun.end_fill()
+
 
 def ladybug() -> None: 
     """Drawing a ladybug in the grass."""
@@ -76,7 +81,9 @@ def ladybug() -> None:
     bug.left(90)
     bug.forward(150)
     
+
 def dot() -> None: 
+    """This function adds dots to the ladybug."""
     dot: Turtle = Turtle()
     dot.penup()
     dot.goto(15, -195)
@@ -109,36 +116,6 @@ def dot() -> None:
     dot.fillcolor("#000000")
     dot.dot(30)
 
-    # bug.penup()
-    # bug.goto(15, -195)
-    # bug.pendown()
-    # bug.fillcolor("#000000")
-    # bug.dot(30)
-    # bug.penup()
-    # bug.goto(0, -150)
-    # bug.pendown()
-    # bug.fillcolor("#000000")
-    # bug.dot(30)
-    # bug.penup()
-    # bug.goto(15, -110)
-    # bug.pendown()
-    # bug.fillcolor("#000000")
-    # bug.dot(30)
-    # bug.penup()
-    # bug.goto(65, -190)
-    # bug.pendown()
-    # bug.fillcolor("#000000")
-    # bug.dot(30)
-    # bug.penup()
-    # bug.goto(80, -150)
-    # bug.pendown()
-    # bug.fillcolor("#000000")
-    # bug.dot(30)
-    # bug.penup()
-    # bug.goto(65, -105)
-    # bug.pendown()
-    # bug.fillcolor("#000000")
-    # bug.dot(30)
 
 if __name__ == "__main__":
     main()
