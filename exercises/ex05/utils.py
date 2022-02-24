@@ -2,7 +2,8 @@
 
 __author__ = "730401929"
 
-input: list = list()
+input: list[int] = list()
+
 
 def only_evens(input: list[int]) -> list[int]:
     """Return list of even numbers from given list."""
@@ -13,6 +14,7 @@ def only_evens(input: list[int]) -> list[int]:
             evens.append(input[i])
         i += 1 
     return evens 
+
 
 def sub(input: list[int], start: int, end: int) -> list[int]: 
     """Return list of numbers between start and end int of given list."""
@@ -26,6 +28,7 @@ def sub(input: list[int], start: int, end: int) -> list[int]:
     while start < end:
         new.append(input[start])
         start += 1 
+    
     return new 
 
 def concat(first: list[int], second: list[int]):
@@ -40,6 +43,3 @@ def concat(first: list[int], second: list[int]):
         new.append(second[i])
         i += 1 
     return new 
-
-
-
