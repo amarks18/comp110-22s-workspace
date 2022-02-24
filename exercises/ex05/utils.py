@@ -31,7 +31,8 @@ def sub(input: list[int], start: int, end: int) -> list[int]:
     
     return new 
 
-def concat(first: list[int], second: list[int]):
+
+def concat(first: list[int], second: list[int]) -> list[int]:
     """Return list that adds second list to first list."""
     i: int = 0 
     new: list[int] = list()
