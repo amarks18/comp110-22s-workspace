@@ -37,7 +37,7 @@ def favorite_color(input: dict[str, str]) -> str:
 
 def count(input: list[str]) -> dict[str, int]:
     """Function that returns a dictionary where each key is associated with the number of times it is found in the input list."""
-    if input == {}:
+    if input == []:
         raise KeyError
     new: dict[str, int] = {}
     i: int = 0 

@@ -2,7 +2,8 @@
 
 __author__ = "730401929"
 
-from exercises.ex06.dictionary import invert, favorite_color, count
+from dictionary import invert, favorite_color, count
+
 
 def test_invert_one() -> None:
     """Test of dict with one pair."""
